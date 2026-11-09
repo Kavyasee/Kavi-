@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Cricket Tickets</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Joesal's Cricket World</h1>
+</header>
+
+<div class="container">
+
+    <div class="panel">
+
+        <h2>Book Your Cricket Tickets</h2>
+
+        <form id="bookingForm">
+
+            <label>Full Name:</label>
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label>Email Address:</label>
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label>Select Match:</label>
+
+            <select required>
+
+                <option value="">Choose Match</option>
+
+                <option>India vs Australia</option>
+
+                <option>India vs England</option>
+
+                <option>India vs South Africa</option>
+
+                <option>CSK vs Mumbai Indians</option>
+
+            </select>
+
+            <label>Match Date:</label>
+
+            <input
+                type="date"
+                required
+            >
+
+            <label>Seat Type:</label>
+
+            <select required>
+
+                <option value="">Select Seat</option>
+
+                <option>General Stand</option>
+
+                <option>Premium Stand</option>
+
+                <option>VIP Stand</option>
+
+            </select>
+
+            <label>Number of Tickets:</label>
+
+            <input
+                type="number"
+                min="1"
+                max="10"
+                placeholder="Enter ticket quantity"
+                required
+            >
+
+            <label>Payment Method:</label>
+
+            <select required>
+
+                <option value="">Select Payment</option>
+
+                <option>UPI</option>
+
+                <option>Credit Card</option>
+
+                <option>Debit Card</option>
+
+                <option>Net Banking</option>
+
+            </select>
+
+            <center>
+
+                <button type="submit">
+                    Book Ticket
+                </button>
+
+                <button type="reset" class="clear-btn">
+                    Clear
+                </button>
+
+            </center>
+
+            <p id="result"></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <p>Joesal's Cricket World</p>
+
+    <a href="#top">Back to Top</a>
+
+</footer>
+
+<script>
+
+document.getElementById("bookingForm")
+.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    if (this.checkValidity()) {
+
+        document.getElementById("result").innerHTML =
+        "Your sample ticket booking request has been submitted successfully!";
+
+    }
+
+});
+
+document.getElementById("bookingForm")
+.addEventListener("reset", function() {
+
+    document.getElementById("result").innerHTML = "";
+
+});
+
+</script>
+
+</body>
+</html>
